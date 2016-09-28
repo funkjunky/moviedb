@@ -5,11 +5,10 @@ import { createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import createLogger from 'redux-logger'
 import promise from 'redux-promise';
+
 import App from './components/App.jsx';
-
-//import reducers from './reducers.jsx';
-
-let reducers = () => ({});
+import reducers from './reducers.jsx';
+import { getNowPlaying } from './actions.jsx';
 
 let loggerMiddleware = createLogger();
 
@@ -24,3 +23,5 @@ render(
     </Provider>,
     document.getElementById('root')
 );
+
+getNowPlaying(store.dispatch);
