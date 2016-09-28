@@ -6,7 +6,7 @@ import Collections from './Collections.jsx';
 import { DARK_BG } from '../constants/colors.jsx';
 
 const LeftBar = () => (
-    <div style={{backgroundColor: DARK_BG, padding: 20}}>
+    <div id="leftbar" style={{backgroundColor: DARK_BG, padding: 20}}>
         <Main />
         <Circles />
         <Collections />
