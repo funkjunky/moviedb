@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MovieThumb = ({movie}) => (
+const MovieDetails = ({movie}) => (
     <div style={{flexGrow: 1}}>
         <img style={{width: 130, height: 200}} src={'http://image.tmdb.org/t/p/w500/' + movie.poster_path} />
         <br />
@@ -8,4 +8,4 @@ const MovieThumb = ({movie}) => (
     </div>
 );
 
-export default MovieThumb;
+export default MovieDetails;

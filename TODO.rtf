@@ -16,27 +16,38 @@
  *- use API to get currently playing movies data\
  *- setup redux to handle movie data in \{ data:\
 \
- - get scss loading working\'85\
+ *- get scss loading working\'85\
 \
- - display thumbs and info like the screenshot [not pixel perfect]\
- - fill out the rest of the display [still not pixel perfect]\
+ *- display thumbs and info like the screenshot [not pixel perfect]\
+ *- Fix the Order at the top to look a little better\
 \
- - get react router working, JUST client side.\
-	- setup routes for: /, movie/[title]\
+ *- get react router working, JUST client side.\
+	*- setup routes for: /, movie/[title]\
 \
- - single page view of the movie.\
-	- Just spit out all the info for now in a not awful looking way\
+ - setup getting data through route\
+	- component will mount getMovie function, which well get the data\
+	- then dispatch an action to fill in the movie data\
+	- then get the movie data in the render function and pass it to MovieDetail\
 \
- - add a couple tests\
+ - Use react router\'92s Link component instead of A tag\
 \
- - push to github\
+ - MovieDetail single page view of the movie.\
+	- put the image at the top, followed by the movie title\
+	- iterate through the properties and display in a moderately nice table\
+\
+ - add two simple unrelated tests in two different files\
 \
  - add search\
 	- first add a route /search/[text]\
+	- onKeyUp debounce filtering through our current set of movies.\
+	- also fire a request to get results and the return well fire an action to update the movie list\
+	- we also should keep track of the search requests we\'92ve made, only keeping the smallest substrings. ie. keep \'93wor\'94 and get rid of \'93world\'94, because wor contains world.\
 	- add the search page component [it\'92ll use MovieList]\
 \
  - create io github page for demo\
 \
- - check responsiveness\
+ - add isomorphism to page and server, including server loaded routes\
 \
- - add on hover for movies like the screenshot}
+ - copy this project into a new Yeoman project scaffolding for \'93react redux router isomorphic\'94\
+\
+ - create the yeoman scaffolding, with options for routes and components, as well as what data they would consume [putting containers in front of components for getting data for routes.], also ask if they want a search and the url pattern for the search (using ::search_term:: in the pattern and ::page:: or ::start:: ::end:: for indices)}

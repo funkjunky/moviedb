@@ -5,13 +5,9 @@ import LeftBar from './LeftBar.jsx';
 import Center from './Center.jsx';
 import styles from '../../styles/main.scss'; 
 
-const App = () => (
-    <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center'}}>
-        <div style={{flexGrow: 1, flexBasis: 200, flex: '0 0 200px'}}>
-            <Search />
-            <LeftBar />
-        </div>
-        <div style={{flexGrow: 1, flexBasis: 'auto'}}><Center /></div>
+const App = ({ children }) => (
+    <div>
+        {children}
     </div>
 );
 

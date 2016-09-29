@@ -1,11 +1,16 @@
 var webpack = require('webpack');
+var path = require('path');
+var request = require('request');
 var WebpackDevServer = require('webpack-dev-server');
 var config = require('./webpack.config');
 
-new WebpackDevServer(webpack(config), {
+var server = new WebpackDevServer(webpack(config), {
     publicPath: config.output.publicPath,
     hot: true,
-}).listen(config.port, 'localhost', function (err, result) {
+    historyApiFallback: true
+})
+
+server.listen(config.port, 'localhost', function (err, result) {
     if (err) {
         return console.log(err);
     }
